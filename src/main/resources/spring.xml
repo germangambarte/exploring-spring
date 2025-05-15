@@ -5,6 +5,7 @@
     <!--<bean id="developer" class="com.gergambarte.Developer" scope="prototype"></bean>-->
     <bean id="developer" class="com.gergambarte.Developer">
         <property name="age" value="26"/>
+        <property name="lap" ref="laptop"/>
     </bean>
     <bean id="laptop" class="com.gergambarte.Laptop"></bean>
 </beans>
