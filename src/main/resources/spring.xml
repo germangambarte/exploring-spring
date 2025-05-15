@@ -4,8 +4,8 @@
 >
     <!--<bean id="developer" class="com.gergambarte.Developer" scope="prototype"></bean>-->
     <bean id="developer" class="com.gergambarte.Developer">
-        <property name="age" value="26"/>
-        <property name="lap" ref="laptop"/>
+        <constructor-arg index="0" value="26"/>
+        <constructor-arg index="1" ref="laptop"/>
     </bean>
     <bean id="laptop" class="com.gergambarte.Laptop"></bean>
 </beans>

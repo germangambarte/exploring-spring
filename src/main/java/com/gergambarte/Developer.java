@@ -8,6 +8,12 @@ public class Developer {
         System.out.println("Developer created");
     }
 
+    public Developer(int age,Laptop lap) {
+        this.age = age;
+        this.lap = lap;
+        System.out.println("Developer created");
+    }
+
     public void code() {
         System.out.println("Coding...");
         lap.compile();
