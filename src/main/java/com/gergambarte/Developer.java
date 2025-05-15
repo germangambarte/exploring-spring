@@ -1,11 +1,19 @@
 package com.gergambarte;
 
 public class Developer {
-    int age;
+    private int age;
     public Developer() {
         System.out.println("Developer created");
     }
     public void code(){
         System.out.println("Coding...");
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
