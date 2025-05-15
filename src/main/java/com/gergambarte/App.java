@@ -1,13 +1,18 @@
 package com.gergambarte;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        /* ApplicationContext:
+            https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html
+        */
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+
+        Developer obj = (Developer) context.getBean("developer");
+        obj.code();
     }
 }
