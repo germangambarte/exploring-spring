@@ -2,21 +2,21 @@ package com.gergambarte;
 
 public class Developer {
     private int age;
-    private Laptop lap;
+    private Computer com;
 
     public Developer() {
         System.out.println("Developer created");
     }
 
-    public Developer(int age,Laptop lap) {
+    public Developer(int age, Computer com) {
         this.age = age;
-        this.lap = lap;
+        this.com = com;
         System.out.println("Developer created");
     }
 
     public void code() {
         System.out.println("Coding...");
-        lap.compile();
+        com.compile();
     }
 
     public int getAge() {
@@ -27,11 +27,12 @@ public class Developer {
         this.age = age;
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getCom() {
+        return com;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setCom(Computer lap) {
+        this.com = lap;
     }
+
 }

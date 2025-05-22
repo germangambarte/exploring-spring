@@ -1,11 +1,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
-    <!--<bean id="developer" class="com.gergambarte.Developer" scope="prototype"></bean>-->
-    <bean id="developer" class="com.gergambarte.Developer">
-        <constructor-arg index="0" value="26"/>
-        <constructor-arg index="1" ref="laptop"/>
+    <bean id="developer" class="com.gergambarte.Developer" autowire="byType">
+        <constructor-arg index="0" value="26" />
+        <constructor-arg index="1" ref="desktop" />
     </bean>
-    <bean id="laptop" class="com.gergambarte.Laptop"></bean>
+    <bean id="laptop" class="com.gergambarte.Laptop" />
+    <bean id="desktop" class="com.gergambarte.Desktop" primary="true" />
 </beans>
