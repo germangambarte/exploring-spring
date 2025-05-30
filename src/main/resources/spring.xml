@@ -3,9 +3,12 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
     <bean id="developer" class="com.gergambarte.Developer" autowire="byType">
-        <constructor-arg index="0" value="26" />
-        <constructor-arg index="1" ref="desktop" />
+        <property name="age" value="26" />
+        <property name="com">
+            <bean id="laptop" class="com.gergambarte.Laptop" />
+        </property>
+        <!-- <constructor-arg index="0" value="26" />
+        <constructor-arg index="1" ref="desktop" /> -->
     </bean>
-    <bean id="laptop" class="com.gergambarte.Laptop" />
-    <bean id="desktop" class="com.gergambarte.Desktop" primary="true" />
+    <bean id="desktop" class="com.gergambarte.Desktop" primary="true" lazy-init="true" />
 </beans>

@@ -12,7 +12,7 @@ public class App
         */
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-        Developer dev = (Developer) context.getBean("developer");
+        Developer dev = context.getBean("developer", Developer.class);
         dev.code();
 
 
